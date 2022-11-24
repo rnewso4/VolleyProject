@@ -7,7 +7,246 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+div {
+  display: flex;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.mainContainer {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+}
+
+.LogoText {
+  margin-top: 40px;
+  font-family: 'Varsity';
+  font-size: 12em;
+  width: 100%;
+  display: flex;
+}
+
+#VOL {
+  justify-content: end;
+  color: #CCFF00;
+  -webkit-text-stroke: 6px;
+  -webkit-text-stroke-color: black; 
+}
+
+#LEY {
+  padding-left: 5px;
+  color: white;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: #CCFF00; 
+}
+
+#tennisGirl {
+  position: absolute;
+  height: auto;
+  width: 560px;
+  bottom: 0;
+  transform: scaleX(-1);
+  z-index: -1;
+}
+
+#loginSquare {
+  width: 50%;
+  height: 400px;
+  align-self: center;
+  background-color: white;
+  border-radius: 50px;
+  align-items: center;
+  flex-direction: column;
+}
+
+#tennisBall {
+  position: absolute;
+  z-index: 0;
+  height: auto;
+  top: 275px;
+  width: 105px;
+}
+
+#navbar {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  height: 3rem;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  color: #606060;
+  text-decoration: none;
+  line-height: 3rem;
+  transition: all 0.5s ease;
+  border-bottom: black 2px solid;
+}
+
+#navbar .navLeftContainers:hover{
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+#navbar #navbarRight:hover{
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+#navbar button{
+  width: 2rem;
+  height: 1.85rem;
+  margin-right: 2rem;
+  margin: 0.5rem auto;
+}
+
+#navbar #dropMenuShow{
+  background-color: #f9f9f9;
+  color: black;
+}
+
+#navbar .dropdownItems:hover{
+  cursor: pointer;
+  background-color: lightgray;
+}
+
+#navbar #navClose{
+  width: 2rem;
+  height: 2rem;
+  display: inline;
+}
+
+#navbar #signout {
+  margin-left: 3.6rem;
+  float: right;
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+}
+
+#navbarLeft div{
+  padding: 0 1rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  width: 100px;
+  justify-content: center;
+}
+
+#navbarRight {
+  transition: all 0.3s ease;
+  display: block;
+  overflow: hidden;
+}
+
+#navbarRight div:nth-child(1) {
+  padding: 0 1rem;
+}
+
+#dropMenuShow {
+  display: block;
+  position: fixed;
+  width: initial;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+#dropMenu {
+  display: none;
+}
+
+#profile {
+  padding: 0 1rem;
+  display: block;
+}
+
+#userName {
+  height: 1.2em;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+#userEmail {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+#dropdownInnerContents {
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.dropdownItems {
+  padding: 0 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  color: black;
+  display: block;
+}
+
+.dropdownItems a{
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: black;
+}
+
+#bottomNavbar {
+  height: 2rem;
+  align-items: center;
+}
+
+#navClose:hover{
+  cursor: pointer;
+}
+
+#logoNavbar{
+  height: 48px;
+}
+
+.eventBox {
+  height: 400px;
+  min-width: 250px;
+  width: 250px;
+  border-radius: 30px;
+  border: black 2px solid;
+  position: relative;
+}
+
+.eventBox .headerBox {
+  position: absolute;
+  height: 80px;
+  width: 250px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border: black 2px solid;
+  left: -2px;
+  top: -2px;
+  background: rgb(255,255,255);
+  background: linear-gradient(133deg, rgba(255,255,255,1) 30%, rgba(204,255,0,1) 100%);
+}
+
+
+#homepageInnerDiv {
+  padding-top: 50px; 
+  height: calc(100vh - 50px); 
+  width: 100%; 
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#headerStyle {
+  width: 100%;
+  text-align: center;
+  line-height: 80px;
+  font-weight: bold;
+  font-size: 1.25em;
 }
