@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Register from './Components/Register';
 import Homepage from './Components/Homepage';
 import Friends from './Components/Friends';
+import ManageEvent from './Components/ManageEvent';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/register" element={ < Register />}/>
           <Route path="/homepage" element={ < Homepage />}/>
           <Route path="/friends" element={ < Friends />}/>
+          <Route path="/eventmanagement" element={ < ManageEvent />}/>
         </Routes>
       </>
     </Router>

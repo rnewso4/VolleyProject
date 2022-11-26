@@ -227,6 +227,7 @@ code {
   width: 250px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  align-items: center;
   border: black 2px solid;
   left: -2px;
   top: -2px;
@@ -246,7 +247,31 @@ code {
 #headerStyle {
   width: 100%;
   text-align: center;
-  line-height: 80px;
   font-weight: bold;
   font-size: 1.25em;
+}
+
+.headerCells {
+  flex: 1; 
+  font-weight: bold; 
+  justify-content: center; 
+  height: 60px; 
+  align-items: center; 
+  border: 2px black solid;
+  border-left: none;
+}
+
+#firstItem{
+  border-left: 2px black solid;
+}
+
+.tableCells {
+  flex: 1; 
+  font-weight: bold; 
+  justify-content: center; 
+  height: 60px; 
+  align-items: center; 
+  border: 2px black solid;
+  border-left: none;
+  border-top: none;
 }

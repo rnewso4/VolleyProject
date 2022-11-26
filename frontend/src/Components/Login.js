@@ -1,9 +1,25 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import tennisGirl from '../assets/tennisGirl.svg'
 import TextField from '@mui/material/TextField';
 import tennisball from '../assets/tennis.png'
+import { useState } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase-config';
 
 const Login = () => {
+
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	let navigate = useNavigate(); 
+
+	const login = async () => {
+		try {
+			await signInWithEmailAndPassword(auth, email, password);
+			navigate('/homepage');
+		} catch (error) {
+			console.log(error.message);
+		}
+	}
 	return (
 		<div className='mainContainer' style={{flexDirection: 'row'}}>
 			<div style={{ flexDirection: 'column', width: '50%'}}>
@@ -12,9 +28,9 @@ const Login = () => {
 				</div>
 				<div style={{justifyContent: 'end'}}>
 					<div style={{marginTop: 90, justifyContent: 'end', paddingRight: 80, width: 265, flexDirection: 'column'}}>
-						<html style={{fontSize: '1.7em', lineHeight: 1.225, textAlign: 'center'}}>
+						<span style={{fontSize: '1.7em', lineHeight: 1.225, textAlign: 'center'}}>
 						Find your new tennis partner within minutes
-						</html>
+						</span>
 						<Link to='/register' style={{color: 'black', fontWeight: 'bold', fontSize: '1.6em', textAlign: 'center', marginTop: 40}}>
 								Register here
 						</Link>
@@ -29,19 +45,25 @@ const Login = () => {
 				<div style={{height: '100%', justifyContent: 'center'}}>
 					<div id='loginSquare'>
 						<img src={tennisball} alt='tennis ball icon' id='tennisBall'/>
-						<TextField 
-							style={{marginTop: 80, width: '75%'}}
-							label="Email" 
-							type='email' 
-							variant="standard"
-						/>
+						<form style={{display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center'}}>
+							<TextField 
+								style={{marginTop: 80, width: '75%'}}
+								label="Email" 
+								autoComplete='email'
+								type='email' 
+								variant="standard"
+								onChange={(e) => {setEmail(e.target.value)}}
+							/>
 
-						<TextField 
-							style={{marginTop: 40, width: '75%'}}
-							label="Password" 
-							type='password' 
-							variant="standard" 
-						/>
+							<TextField 
+								style={{marginTop: 40, width: '75%'}}
+								label="Password" 
+								autoComplete='current-password'
+								type='password' 
+								variant="standard" 
+								onChange={(e) => {setPassword(e.target.value)}}
+							/>
+						</form>
 
 						<div style={{width: '100%', justifyContent: 'end', paddingRight: 94.5}}>
 							<Link to='/register' style={{color: 'black', fontWeight: 'bold', fontSize: '1em', textAlign: 'center', marginTop: 20}}>
@@ -49,7 +71,7 @@ const Login = () => {
 							</Link>
 						</div>
 
-						<Link to='/homepage' style={{textDecoration: 'none', fontWeight: 'bold', fontSize: '1.3em', color: 'black', marginTop: 50}}>
+						<Link to='#' style={{textDecoration: 'none', fontWeight: 'bold', fontSize: '1.3em', color: 'black', marginTop: 50}} onClick={login}>
 							<div style={{backgroundColor: '#D6E826', width: 180, height: 44, borderRadius: 60, justifyContent: 'center', alignItems: 'center'}}>
 								LOGIN
 							</div>
