@@ -9,14 +9,20 @@ import { auth } from '../firebase-config';
 const Login = () => {
 
 	const [email, setEmail] = useState("");
+	const [error, setError] = useState(false);
+	const [helperText, setText] = useState('');
 	const [password, setPassword] = useState("");
 	let navigate = useNavigate(); 
 
 	const login = async () => {
 		try {
 			await signInWithEmailAndPassword(auth, email, password);
+			setError(false);
+			setText('');
 			navigate('/homepage');
 		} catch (error) {
+			setError(true)
+			setText(error.message)
 			console.log(error.message);
 		}
 	}
@@ -48,6 +54,8 @@ const Login = () => {
 						<form style={{display: 'flex', flexDirection: 'column', width: '100%', alignItems: 'center'}}>
 							<TextField 
 								style={{marginTop: 80, width: '75%'}}
+								error={error}
+								helperText={helperText}
 								label="Email" 
 								autoComplete='email'
 								type='email' 
