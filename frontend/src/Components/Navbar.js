@@ -51,7 +51,7 @@ const Navbar = () => {
     
     return (
         <>
-            <div id='navbar'>
+            <div id='navbar' style={{zIndex: 3}}>
                 <div id='navbarLeft'>
                     <img src={ tennisball } alt='tennisball' id='logoNavbar'/> 
                     <Link to='/homepage' style={{textDecoration: 'none', color: 'black', fontWeight: 'bold'}}>
