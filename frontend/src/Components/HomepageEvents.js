@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const HomepageEvents = ({last, data, id, canEdit}) => {
   const restrictions = data.restrictions !== 'none';
   return (
-    <div className='eventBox' style={{marginRight: last ? 30 : 100}}>
+    <div className='eventBox' style={{marginRight: last ? 30 : 100, backgroundColor: 'white'}}>
       <div className="headerBox">
         <Link to='/eventmanagement' state={{ create: false, data: data, id: id }} style={{display: canEdit ? 'block' : 'none', color: 'black'}}>
           <MdEdit size={25} style={{position: 'absolute', right: 15, top: 15}}/>

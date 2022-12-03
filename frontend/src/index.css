@@ -274,3 +274,15 @@ code {
   border-left: none;
   border-top: none;
 }
+
+.tennisPhoto::before {
+  background-image: url('assets/780473.jpg');
+  background-size: cover;
+  content: "";
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.7;
+}
