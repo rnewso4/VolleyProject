@@ -18,52 +18,52 @@ const Homepage = () => {
 
 
   useEffect(() => {
-    if (!loaded) {
-      onAuthStateChanged(auth, (currentUser) => {
-        if (!currentUser) {
-          navigate('/login')
-        }
-        loadUserData();
-      })
-    }
+    // if (!loaded) {
+    //   onAuthStateChanged(auth, (currentUser) => {
+    //     if (!currentUser) {
+    //       navigate('/login')
+    //     }
+    //     loadUserData();
+    //   })
+    // }
   }, [loaded, navigate])
 
   const loadUserData = async () => {
-    try {
-      if (auth.currentUser?.email) {
-        const q = query(collection(db, 'users'), where("email", "==", auth.currentUser.email));
-        const querySnapshot = await getDocs(q);
-        querySnapshot.forEach((doc) => {
-          setLocation(doc.get('location'));
-          setBusinessOwner(doc.get('businessOwner'));
-          setOrganization(doc.get('organization'));
-        });
-        setLoaded(true)
-      }
-    } catch (error) {
-      console.log(error.message)
-    }
+    // try {
+    //   if (auth.currentUser?.email) {
+    //     const q = query(collection(db, 'users'), where("email", "==", auth.currentUser.email));
+    //     const querySnapshot = await getDocs(q);
+    //     querySnapshot.forEach((doc) => {
+    //       setLocation(doc.get('location'));
+    //       setBusinessOwner(doc.get('businessOwner'));
+    //       setOrganization(doc.get('organization'));
+    //     });
+    //     setLoaded(true)
+    //   }
+    // } catch (error) {
+    //   console.log(error.message)
+    // }
   }
 
   const loadEvents = async () => {
-    const q = query(collection(db, 'events'), where("location", "==", location));
-    const querySnapshot = await getDocs(q);
-    const tempArray = []
-    querySnapshot.forEach((doc) => {
-      tempArray.push(doc)
-    });
-    setEvents(tempArray)
+    // const q = query(collection(db, 'events'), where("location", "==", location));
+    // const querySnapshot = await getDocs(q);
+    // const tempArray = []
+    // querySnapshot.forEach((doc) => {
+    //   tempArray.push(doc)
+    // });
+    // setEvents(tempArray)
   }
 
   const checkEditStatus = (data) => {
-    if (!organization || !businessOwner) return false;
-    if (organization === '*all') return true;
-    if (data.organization === organization) return true;
-    return false;
+    // if (!organization || !businessOwner) return false;
+    // if (organization === '*all') return true;
+    // if (data.organization === organization) return true;
+    // return false;
   }
 
   useEffect(() => {
-    if (location) loadEvents();
+    // if (location) loadEvents();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location])
 

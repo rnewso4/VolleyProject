@@ -267,7 +267,6 @@ code {
 
 .tableCells {
   flex: 1; 
-  font-weight: bold; 
   justify-content: center; 
   height: 60px; 
   align-items: center; 
