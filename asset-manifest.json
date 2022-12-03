@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/VolleyProject/static/css/main.d913d316.css",
-    "main.js": "/VolleyProject/static/js/main.86f1bd48.js",
+    "main.css": "/VolleyProject/static/css/main.ecedb1a2.css",
+    "main.js": "/VolleyProject/static/js/main.44ee8918.js",
     "static/js/787.cda612ba.chunk.js": "/VolleyProject/static/js/787.cda612ba.chunk.js",
+    "static/media/780473.jpg": "/VolleyProject/static/media/780473.f9331ca12d9f10b6f71d.jpg",
     "static/media/tennis.png": "/VolleyProject/static/media/tennis.71717cb2d5baa12f3a4f.png",
     "static/media/tennisGirl.svg": "/VolleyProject/static/media/tennisGirl.c1d5a3d1ee580fecf0b3212c0a3ef9d7.svg",
     "index.html": "/VolleyProject/index.html",
-    "main.d913d316.css.map": "/VolleyProject/static/css/main.d913d316.css.map",
-    "main.86f1bd48.js.map": "/VolleyProject/static/js/main.86f1bd48.js.map",
+    "main.ecedb1a2.css.map": "/VolleyProject/static/css/main.ecedb1a2.css.map",
+    "main.44ee8918.js.map": "/VolleyProject/static/js/main.44ee8918.js.map",
     "787.cda612ba.chunk.js.map": "/VolleyProject/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d913d316.css",
-    "static/js/main.86f1bd48.js"
+    "static/css/main.ecedb1a2.css",
+    "static/js/main.44ee8918.js"
   ]
 }
