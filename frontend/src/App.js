@@ -1,5 +1,5 @@
 import Login from './Components/Login'
-import { BrowserRouter as Router, Routes, Route, HashRouter } from 'react-router-dom'
+import { Routes, Route, HashRouter } from 'react-router-dom'
 import Register from './Components/Register';
 import Homepage from './Components/Homepage';
 import Friends from './Components/Friends';
